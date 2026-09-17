@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
 
 import "./globals.css";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://yourdomain.com"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
 
   title: {
     default: "DocForge — Image & PDF Converter",
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
     title: "DocForge — Image & PDF Converter",
     description:
       "Convert images to PDF and PDF pages to images directly in your browser. No uploads, no waiting.",
-    url: "https://yourdomain.com",
+    url: process.env.NEXT_PUBLIC_SITE_URL!,
     siteName: "DocForge",
     type: "website",
     locale: "en_US",
@@ -84,6 +85,7 @@ export default function RootLayout({
 
       <body className="font-sans antialiased">
         {children}
+         <SpeedInsights />
       </body>
     </html>
   );
