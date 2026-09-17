@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: 240 242 236;
+  --color-surface: 255 255 255;
+  --color-border: 214 214 202;
+  --color-text: 24 27 23;
+  --color-muted: 100 104 96;
+  --color-accent: 46 111 94;
+  --color-accent-strong: 37 90 76;
+  --color-danger: 181 80 47;
+}
+
+[data-theme="dark"] {
+  --color-bg: 20 23 28;
+  --color-surface: 27 31 39;
+  --color-border: 51 59 73;
+  --color-text: 243 241 234;
+  --color-muted: 168 172 163;
+  --color-accent: 91 158 138;
+  --color-accent-strong: 122 184 164;
+  --color-danger: 214 130 101;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-bg));
+  color: rgb(var(--color-text));
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background-color: rgb(var(--color-accent));
+  color: rgb(var(--color-surface));
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+@keyframes tray-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tray-in {
+  animation: tray-in 0.35s ease-out both;
+}
+
+.focus-ring:focus-visible {
+  outline: 2px solid rgb(var(--color-accent));
+  outline-offset: 2px;
+}
+
+/* Hero conversion animation: a photo sheet slides behind and becomes a
+   stack of document pages. One orchestrated moment on load, looping slowly. */
+@keyframes hero-photo {
+  0%, 38% { transform: translateX(0) rotate(-3deg); opacity: 1; }
+  55%, 100% { transform: translateX(-14px) rotate(-6deg); opacity: 0.65; }
+}
+
+@keyframes hero-page-1 {
+  0%, 38% { transform: translate(6px, 10px) rotate(2deg) scale(0.94); opacity: 0; }
+  55% { opacity: 1; }
+  70%, 100% { transform: translate(22px, -4px) rotate(4deg) scale(1); opacity: 1; }
+}
+
+@keyframes hero-page-2 {
+  0%, 50% { transform: translate(6px, 10px) rotate(2deg) scale(0.9); opacity: 0; }
+  65% { opacity: 1; }
+  80%, 100% { transform: translate(34px, 6px) rotate(7deg) scale(1); opacity: 1; }
+}
+
+.hero-photo { animation: hero-photo 4.5s ease-in-out infinite; transform-origin: center; }
+.hero-page-1 { animation: hero-page-1 4.5s ease-in-out infinite; transform-origin: center; }
+.hero-page-2 { animation: hero-page-2 4.5s ease-in-out infinite; transform-origin: center; }
+
+@media (prefers-reduced-motion: reduce) {
+  .tray-in { animation: none; }
+  .hero-photo, .hero-page-1, .hero-page-2 { animation: none; }
+  .hero-page-1, .hero-page-2 { opacity: 1; }
+  html { scroll-behavior: auto; }
+}

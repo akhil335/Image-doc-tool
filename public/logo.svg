@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="161"
+   viewBox="0 0 161 161"
+   role="img"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="docforge_logo.svg"
+   height="161"
+   inkscape:version="1.3.2 (091e20e, 2023-11-25, custom)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+
+  <path
+     d="M 19.948959,0.17735047 H 123.94896 l 36,36.00000053 V 140.17734 q 0,20 -20,20 H 19.948959 q -19.99999989,0 -19.99999989,-20 V 20.177351 q 0,-20.00000053 19.99999989,-20.00000053 z"
+     fill="var(--surface-1)"
+     stroke="var(--border-strong)"
+     stroke-width="1.5"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#fcfcfb;stroke-width:1.5px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="path1"
+     inkscape:transform-center-x="-46.730645"
+     inkscape:transform-center-y="-194.3011" />
+  <path
+     d="m 123.94896,0.17735047 36,36.00000053 h -36 z"
+     fill="var(--border-strong)"
+     opacity="0.5"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:0.5;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="path2"
+     inkscape:transform-center-x="-108.73064"
+     inkscape:transform-center-y="-256.3011" />
+  <circle
+     cx="47.948963"
+     cy="46.177349"
+     r="9"
+     fill="#1F8F6B"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#1f8f6b;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="circle2"
+     inkscape:transform-center-x="-14.730647"
+     inkscape:transform-center-y="-228.3011" />
+  <path
+     d="m 21.948959,102.17734 30,-35.999989 20,20.000001 25.999995,-30.000001 38.000006,45.999989 z"
+     fill="#1F8F6B"
+     opacity="0.85"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:0.85;fill:#1f8f6b;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="path3"
+     inkscape:transform-center-x="-45.730645"
+     inkscape:transform-center-y="-195.3011" />
+  <rect
+     x="21.948959"
+     y="118.17735"
+     width="100"
+     height="4"
+     rx="2"
+     fill="var(--text-muted)"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#898781;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="rect3"
+     inkscape:transform-center-x="-38.730645"
+     inkscape:transform-center-y="-154.3011" />
+  <rect
+     x="21.948959"
+     y="130.17737"
+     width="80"
+     height="4"
+     rx="2"
+     fill="var(--text-muted)"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#898781;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="rect4"
+     inkscape:transform-center-x="-28.730645"
+     inkscape:transform-center-y="-142.3011" />
+  <rect
+     x="21.948959"
+     y="142.17737"
+     width="60"
+     height="4"
+     rx="2"
+     fill="var(--text-muted)"
+     style="color:#0b0b0b;font-weight:400;font-size:16px;font-family:anthropic-sans, '-apple-system', BlinkMacSystemFont, 'Segoe UI', sans-serif;dominant-baseline:auto;text-anchor:start;opacity:1;fill:#898781;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter"
+     id="rect5"
+     inkscape:transform-center-x="-18.730645"
+     inkscape:transform-center-y="-130.3011" />
+</svg>
