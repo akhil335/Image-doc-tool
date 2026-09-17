@@ -13,6 +13,10 @@ export const metadata: Metadata = {
 
   description:
     "Convert images to PDF and PDF pages to images directly in your browser. No uploads, no waiting.",
+  
+  verification: {
+    google: "google06433cbd59ee0df0",
+  },
 
   keywords: [
     "image to PDF",
