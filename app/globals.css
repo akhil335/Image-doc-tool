@@ -1,99 +1,237 @@
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  --color-bg: 240 242 236;
+  /* Warm Technical Studio Light Mode */
+  --color-bg: 247 246 243;
   --color-surface: 255 255 255;
-  --color-border: 214 214 202;
-  --color-text: 24 27 23;
-  --color-muted: 100 104 96;
-  --color-accent: 46 111 94;
-  --color-accent-strong: 37 90 76;
-  --color-danger: 181 80 47;
+  --color-surface-muted: 241 239 235;
+  --color-surface-hover: 243 241 236;
+  --color-border: 226 222 214;
+  --color-border-subtle: 236 233 226;
+  --color-text: 17 19 24;
+  --color-muted: 105 110 120;
+  
+  /* Brand Accent: Electric Studio Tangerine */
+  --color-accent: 255 77 0;
+  --color-accent-strong: 235 65 0;
+  --color-accent-subtle: 255 242 236;
+  --color-danger: 239 68 68;
 }
 
 [data-theme="dark"] {
-  --color-bg: 20 23 28;
-  --color-surface: 27 31 39;
-  --color-border: 51 59 73;
-  --color-text: 243 241 234;
-  --color-muted: 168 172 163;
-  --color-accent: 91 158 138;
-  --color-accent-strong: 122 184 164;
-  --color-danger: 214 130 101;
+  /* Studio Obsidian / Technical Carbon Dark Mode */
+  --color-bg: 12 14 18;
+  --color-surface: 19 21 27;
+  --color-surface-muted: 24 27 35;
+  --color-surface-hover: 27 31 40;
+  --color-border: 34 38 48;
+  --color-border-subtle: 25 28 36;
+  --color-text: 245 245 247;
+  --color-muted: 140 146 160;
+  
+  /* Brand Accent in Dark Mode */
+  --color-accent: 255 88 15;
+  --color-accent-strong: 255 77 0;
+  --color-accent-subtle: 42 18 10;
+  --color-danger: 248 113 113;
 }
 
 html {
   scroll-behavior: smooth;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
 }
 
 body {
   background-color: rgb(var(--color-bg));
   color: rgb(var(--color-text));
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-::selection {
-  background-color: rgb(var(--color-accent));
-  color: rgb(var(--color-surface));
+/* Subtle Technical Dot Grid */
+.bg-studio-grid {
+  background-image: radial-gradient(rgba(var(--color-text) / 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.grain {
-  position: relative;
+/* Canvas Transparency Checkerboard */
+.bg-checkerboard {
+  background-color: rgb(var(--color-surface));
+  background-image: 
+    linear-gradient(45deg, rgba(var(--color-text) / 0.04) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(var(--color-text) / 0.04) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(var(--color-text) / 0.04) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(var(--color-text) / 0.04) 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
 }
 
-.grain::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  opacity: 0.035;
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-}
-
-@keyframes tray-in {
-  from { opacity: 0; transform: translateY(6px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-.tray-in {
-  animation: tray-in 0.35s ease-out both;
-}
-
+/* Studio Focus Rings */
 .focus-ring:focus-visible {
   outline: 2px solid rgb(var(--color-accent));
   outline-offset: 2px;
 }
 
-/* Hero conversion animation: a photo sheet slides behind and becomes a
-   stack of document pages. One orchestrated moment on load, looping slowly. */
-@keyframes hero-photo {
-  0%, 38% { transform: translateX(0) rotate(-3deg); opacity: 1; }
-  55%, 100% { transform: translateX(-14px) rotate(-6deg); opacity: 0.65; }
+/* Studio Card Hover Interaction */
+.card-interactive {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.2s ease, 
+              box-shadow 0.2s ease,
+              background-color 0.15s ease;
 }
 
-@keyframes hero-page-1 {
-  0%, 38% { transform: translate(6px, 10px) rotate(2deg) scale(0.94); opacity: 0; }
-  55% { opacity: 1; }
-  70%, 100% { transform: translate(22px, -4px) rotate(4deg) scale(1); opacity: 1; }
+.card-interactive:hover {
+  transform: translateY(-3px);
+  border-color: rgb(var(--color-accent) / 0.45);
+  box-shadow: 0 10px 28px -10px rgba(0, 0, 0, 0.14);
 }
 
-@keyframes hero-page-2 {
-  0%, 50% { transform: translate(6px, 10px) rotate(2deg) scale(0.9); opacity: 0; }
-  65% { opacity: 1; }
-  80%, 100% { transform: translate(34px, 6px) rotate(7deg) scale(1); opacity: 1; }
+[data-theme="dark"] .card-interactive:hover {
+  box-shadow: 0 12px 32px -10px rgba(0, 0, 0, 0.7), 0 0 20px -4px rgba(255, 77, 0, 0.2);
 }
 
-.hero-photo { animation: hero-photo 4.5s ease-in-out infinite; transform-origin: center; }
-.hero-page-1 { animation: hero-page-1 4.5s ease-in-out infinite; transform-origin: center; }
-.hero-page-2 { animation: hero-page-2 4.5s ease-in-out infinite; transform-origin: center; }
+/* Studio Animations & Micro-Interactions */
+@keyframes slide-up-fade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: slide-up-fade 0.25s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Laser Scan Line for Image Preview */
+@keyframes laser-scan {
+  0% {
+    top: -2px;
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  85% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+.animate-laser-scan {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgb(var(--color-accent)), transparent);
+  box-shadow: 0 0 12px 2px rgb(var(--color-accent));
+  animation: laser-scan 3.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+  pointer-events: none;
+}
+
+/* Traveling Energy Beam Along Connector Tracks */
+@keyframes beam-flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.animate-beam-flow {
+  animation: beam-flow 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Ambient Subtle Floating */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-float {
+  animation: float-gentle 4.5s ease-in-out infinite;
+}
+
+/* Compression Bar Shimmer Effect */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(255, 77, 0, 0.8) 0%,
+    rgba(255, 255, 255, 0.7) 50%,
+    rgba(255, 77, 0, 0.8) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 2.2s linear infinite;
+}
+
+/* Radar Beacon for Comparison Slider Handle */
+@keyframes pulse-radar {
+  0% {
+    box-shadow: 0 0 0 0 rgba(var(--color-accent) / 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(var(--color-accent) / 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--color-accent) / 0);
+  }
+}
+
+.animate-radar {
+  animation: pulse-radar 2.5s infinite;
+}
+
+/* Breathing Ambient Glow */
+@keyframes glow-breathe {
+  0%, 100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.32;
+    transform: scale(1.06);
+  }
+}
+
+.animate-glow-breathe {
+  animation: glow-breathe 6s ease-in-out infinite;
+}
 
 @media (prefers-reduced-motion: reduce) {
-  .tray-in { animation: none; }
-  .hero-photo, .hero-page-1, .hero-page-2 { animation: none; }
-  .hero-page-1, .hero-page-2 { opacity: 1; }
-  html { scroll-behavior: auto; }
+  .animate-fade-in,
+  .animate-laser-scan,
+  .animate-beam-flow,
+  .animate-float,
+  .animate-shimmer,
+  .animate-radar,
+  .animate-glow-breathe {
+    animation: none;
+  }
+  .card-interactive:hover {
+    transform: none;
+  }
+  html {
+    scroll-behavior: auto;
+  }
 }

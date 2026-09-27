@@ -1,4 +1,4 @@
-export type ImageFormat = "png" | "jpeg";
+export type ImageFormat = "png" | "jpeg" | "webp";
 
 export interface RenderedPage {
   pageNumber: number;
@@ -20,13 +20,14 @@ async function getPdfjs() {
 }
 
 /**
- * Renders every page of a PDF file to raster images at the given scale.
+ * Renders pages of a PDF file to raster images at the given scale.
  */
 export async function pdfToImages(
   file: File,
   format: ImageFormat = "png",
   scale = 2,
-  onProgress?: (done: number, total: number) => void
+  onProgress?: (done: number, total: number) => void,
+  selectedPages?: number[]
 ): Promise<RenderedPage[]> {
   const pdfjsLib = await getPdfjs();
   const buffer = await file.arrayBuffer();
@@ -34,9 +35,24 @@ export async function pdfToImages(
   const pdf = await loadingTask.promise;
 
   const results: RenderedPage[] = [];
-  const mimeType = format === "png" ? "image/png" : "image/jpeg";
+  const mimeType =
+    format === "png"
+      ? "image/png"
+      : format === "webp"
+      ? "image/webp"
+      : "image/jpeg";
 
-  for (let pageNum = 1; pageNum <= pdf.numPages; pageNum++) {
+  const totalPages = pdf.numPages;
+  const pagesToRender: number[] = [];
+
+  for (let i = 1; i <= totalPages; i++) {
+    if (!selectedPages || selectedPages.length === 0 || selectedPages.includes(i)) {
+      pagesToRender.push(i);
+    }
+  }
+
+  let doneCount = 0;
+  for (const pageNum of pagesToRender) {
     const page = await pdf.getPage(pageNum);
     const viewport = page.getViewport({ scale });
 
@@ -46,20 +62,27 @@ export async function pdfToImages(
     const ctx = canvas.getContext("2d");
     if (!ctx) throw new Error("Could not get canvas context");
 
+    // White background for JPG/WebP
+    if (format === "jpeg") {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+    }
+
     await page.render({ canvasContext: ctx, viewport }).promise;
 
     const blob: Blob = await new Promise((resolve, reject) => {
       canvas.toBlob(
         (b) => (b ? resolve(b) : reject(new Error("Canvas export failed"))),
         mimeType,
-        format === "jpeg" ? 0.92 : undefined
+        format === "jpeg" || format === "webp" ? 0.92 : undefined
       );
     });
 
     const dataUrl = canvas.toDataURL(mimeType);
 
     results.push({ pageNumber: pageNum, blob, dataUrl });
-    onProgress?.(pageNum, pdf.numPages);
+    doneCount++;
+    onProgress?.(doneCount, pagesToRender.length);
   }
 
   return results;

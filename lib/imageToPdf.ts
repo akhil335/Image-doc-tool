@@ -1,10 +1,12 @@
 import { PDFDocument } from "pdf-lib";
 
-export type PageSize = "fit" | "a4" | "letter";
+export type PageSize = "fit" | "a4" | "letter" | "legal";
+export type PageOrientation = "portrait" | "landscape" | "auto";
 
 const SIZES: Record<Exclude<PageSize, "fit">, [number, number]> = {
   a4: [595.28, 841.89],
   letter: [612, 792],
+  legal: [612, 1008],
 };
 
 async function readAsArrayBuffer(file: File): Promise<ArrayBuffer> {
@@ -18,6 +20,7 @@ async function readAsArrayBuffer(file: File): Promise<ArrayBuffer> {
 export async function imagesToPdf(
   files: File[],
   pageSize: PageSize = "fit",
+  orientation: PageOrientation = "auto",
   margin = 0
 ): Promise<Uint8Array> {
   const pdfDoc = await PDFDocument.create();
@@ -36,10 +39,22 @@ export async function imagesToPdf(
     let pageH: number;
 
     if (pageSize === "fit") {
-      pageW = imgW;
-      pageH = imgH;
+      pageW = imgW + margin * 2;
+      pageH = imgH + margin * 2;
     } else {
-      [pageW, pageH] = SIZES[pageSize];
+      const [baseW, baseH] = SIZES[pageSize];
+      const isImgLandscape = imgW > imgH;
+
+      if (
+        orientation === "landscape" ||
+        (orientation === "auto" && isImgLandscape)
+      ) {
+        pageW = Math.max(baseW, baseH);
+        pageH = Math.min(baseW, baseH);
+      } else {
+        pageW = Math.min(baseW, baseH);
+        pageH = Math.max(baseW, baseH);
+      }
     }
 
     const page = pdfDoc.addPage([pageW, pageH]);

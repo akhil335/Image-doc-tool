@@ -1,30 +1,50 @@
 import type { Metadata } from "next";
-
+import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+  display: "swap",
+});
+
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL!),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://image-doc-tool-nine.vercel.app"),
 
   title: {
-    default: "DocForge — Image & PDF Converter",
+    default: "DocForge — Image Laboratory & Creative Toolkit",
     template: "%s | DocForge",
   },
 
   description:
-    "Convert images to PDF and PDF pages to images directly in your browser. No uploads, no waiting.",
-  
+    "Fast, private, client-side image processing. Convert, compress, resize, optimize, and vectorize images directly in your browser. Zero server uploads.",
+
   verification: {
     google: "google06433cbd59ee0df0",
   },
 
   keywords: [
-    "image to PDF",
-    "PDF to image",
+    "image laboratory",
+    "image compressor",
     "image converter",
-    "PDF converter",
-    "online PDF converter",
-    "browser PDF converter",
+    "svg vectorizer",
+    "image resizer",
+    "client-side image tools",
+    "private image processing",
+    "browser image tools",
   ],
 
   alternates: {
@@ -32,28 +52,28 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "DocForge — Image & PDF Converter",
+    title: "DocForge — Image Laboratory & Creative Toolkit",
     description:
-      "Convert images to PDF and PDF pages to images directly in your browser. No uploads, no waiting.",
-    url: process.env.NEXT_PUBLIC_SITE_URL!,
+      "Transform images with zero server uploads. High-precision compression, conversion, vectorization, and resizing in your browser.",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://docforge.dev",
     siteName: "DocForge",
     type: "website",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
-        width: 512,
-        height: 512,
-        alt: "DocForge — Image & PDF Converter",
+        width: 1200,
+        height: 630,
+        alt: "DocForge — Image Laboratory & Creative Toolkit",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "DocForge — Image & PDF Converter",
+    title: "DocForge — Image Laboratory & Creative Toolkit",
     description:
-      "Convert images to PDF and PDF pages to images directly in your browser.",
+      "Transform images with zero server uploads. High-precision compression, conversion, vectorization, and resizing in your browser.",
     images: ["/og-image.png"],
   },
 
@@ -82,14 +102,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${spaceGrotesk.variable} ${inter.variable} ${jetbrainsMono.variable}`}
+      suppressHydrationWarning
+    >
       <head>
         <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
       </head>
 
-      <body className="font-sans antialiased">
+      <body className="font-sans antialiased selection:bg-accent/20 selection:text-text min-h-screen flex flex-col" suppressHydrationWarning>
         {children}
-         <SpeedInsights />
+        <SpeedInsights />
       </body>
     </html>
   );
