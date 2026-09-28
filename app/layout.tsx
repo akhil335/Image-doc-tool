@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk, Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { ThemeProvider, useTheme } from "@context/ThemeContext";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -31,10 +32,6 @@ export const metadata: Metadata = {
 
   description:
     "Fast, private, client-side image processing. Convert, compress, resize, optimize, and vectorize images directly in your browser. Zero server uploads.",
-
-  verification: {
-    google: "google06433cbd59ee0df0",
-  },
 
   keywords: [
     "image laboratory",
@@ -112,7 +109,9 @@ export default function RootLayout({
       </head>
 
       <body className="font-sans antialiased selection:bg-accent/20 selection:text-text min-h-screen flex flex-col" suppressHydrationWarning>
-        {children}
+        <ThemeProvider>
+          {children}
+        </ThemeProvider>
         <SpeedInsights />
       </body>
     </html>

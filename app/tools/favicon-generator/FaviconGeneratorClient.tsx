@@ -75,7 +75,7 @@ export default function FaviconGeneratorClient() {
     setImgUrl(SAMPLE_LOGO);
     const sampleOpts: FaviconOptions = {
       ...options,
-      appName: "DocForge Studio",
+      appName: "Docsy",
       paddingPercent: 8,
     };
     setOptions(sampleOpts);

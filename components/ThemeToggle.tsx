@@ -1,16 +1,12 @@
 "use client";
 
+import { useTheme } from "@/context/ThemeContext";
 import { useEffect, useState } from "react";
 
 export default function ThemeToggle() {
-  const [theme, setTheme] = useState<"light" | "dark">("light");
+  const { theme, setTheme } = useTheme()
+  
   const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-    const current = document.documentElement.getAttribute("data-theme");
-    setTheme(current === "dark" ? "dark" : "light");
-  }, []);
 
   function toggle() {
     const next = theme === "dark" ? "light" : "dark";

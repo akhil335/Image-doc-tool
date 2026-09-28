@@ -1,6 +1,10 @@
+import { useTheme } from "@/context/ThemeContext";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
+  const { theme } = useTheme()
+  
   return (
     <footer className="border-t border-border bg-surface/70 text-[13px]">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16">
@@ -8,18 +12,7 @@ export default function Footer() {
           {/* Brand Info */}
           <div className="sm:col-span-2 space-y-3">
             <Link href="/" className="flex items-center gap-2.5 font-display font-bold text-text text-[16px] tracking-tight">
-              <div className="flex h-6 w-6 items-center justify-center rounded-md bg-accent text-white shadow-xs">
-                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10" />
-                  <path d="m14.31 8 5.74 9.94" />
-                  <path d="M9.69 8h11.48" />
-                  <path d="m7.38 12 5.74-9.94" />
-                  <path d="M9.69 16 3.95 6.06" />
-                  <path d="M14.31 16H2.83" />
-                  <path d="m16.62 12-5.74 9.94" />
-                </svg>
-              </div>
-              <span>DocForge Studio</span>
+              <Image src = {theme === "dark" ? "/dark-logo.png" : "/light-logo.png"} alt = "logo" width = {70} height = {30} />
             </Link>
 
             <p className="text-muted max-w-sm leading-relaxed text-[13px]">
