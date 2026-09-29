@@ -23,12 +23,9 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://image-doc-tool-nine.vercel.app"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.docsy.tech"),
 
-  title: {
-    default: "DocForge — Image Laboratory & Creative Toolkit",
-    template: "%s | DocForge",
-  },
+  title: { default: "Docsy — All-in-One Image Tools", template: "%s | Docsy", },
 
   description:
     "Fast, private, client-side image processing. Convert, compress, resize, optimize, and vectorize images directly in your browser. Zero server uploads.",
@@ -49,28 +46,28 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "DocForge — Image Laboratory & Creative Toolkit",
+    title: "Docsy — Free Online Image Tools",
     description:
-      "Transform images with zero server uploads. High-precision compression, conversion, vectorization, and resizing in your browser.",
-    url: process.env.NEXT_PUBLIC_SITE_URL || "https://docforge.dev",
-    siteName: "DocForge",
+      "Transform your images with Docsy. Convert, compress, resize, crop, and optimize images quickly and easily, right in your browser.",
+    url: process.env.NEXT_PUBLIC_SITE_URL || "https://www.docsy.tech",
+    siteName: "Docsy",
     type: "website",
     locale: "en_US",
     images: [
       {
         url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DocForge — Image Laboratory & Creative Toolkit",
+        width: 1114,
+        height: 326,
+        alt: "Docsy — Free Online Image Tools",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "DocForge — Image Laboratory & Creative Toolkit",
+    title: "Docsy — Free Online Image Tools",
     description:
-      "Transform images with zero server uploads. High-precision compression, conversion, vectorization, and resizing in your browser.",
+      "Convert, compress, resize, crop, and optimize images quickly and easily with Docsy.",
     images: ["/og-image.png"],
   },
 
