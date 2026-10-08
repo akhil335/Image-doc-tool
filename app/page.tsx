@@ -923,7 +923,7 @@ export default function HomePage() {
                 beforeUrl={DEMO_ORIGINAL}
                 afterUrl={DEMO_COMPRESSED}
                 beforeLabel="Original Camera JPEG"
-                afterLabel="DocForge WebP (Compressed)"
+                afterLabel="docst.tech WebP (Compressed)"
                 beforeStats="3.8 MB · 100% Quality"
                 afterStats="710 KB · 75% Quality"
                 savingsBadge="81% Smaller"
@@ -970,7 +970,7 @@ export default function HomePage() {
                 BUILT FOR ZERO-LATENCY SPEED.
               </h2>
               <p className="text-muted text-[15px]">
-                Traditional tools upload your private images to cloud queues. DocForge runs a sandboxed engine directly inside your browser.
+                Traditional tools upload your private images to cloud queues. docst.tech runs a sandboxed engine directly inside your browser.
               </p>
             </div>
 
@@ -1042,7 +1042,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Cloud vs DocForge Comparison Matrix */}
+            {/* Cloud vs docst.tech Comparison Matrix */}
             <div className="mt-8 rounded-2xl border border-border bg-border overflow-hidden shadow-xs">
               <div className="grid grid-cols-2 md:grid-cols-4 gap-px text-center font-mono text-[12px]">
                 <div className="bg-surface p-3 sm:p-4">

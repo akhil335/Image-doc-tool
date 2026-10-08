@@ -136,7 +136,7 @@ export default function Footer() {
             Your files stay in your browser whenever possible. 100% private.
           </p>
           <p className="font-mono text-[11px] text-muted/70">
-            DocForge · High-Precision Creative Toolkit
+            docst.tech · High-Precision Creative Toolkit
           </p>
         </div>
       </div>

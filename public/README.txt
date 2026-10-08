@@ -1,4 +1,4 @@
-DOCFORGE FAVICON PACKAGE
+docst.tech FAVICON PACKAGE
 ========================
 Generated for: Dark-logo-cropped-88x75
 

@@ -126,7 +126,7 @@ export default function FaviconGeneratorClient() {
       zip.file("site.webmanifest", manifestJson);
 
       // 4. Add HTML instructions
-      const readme = `DOCFORGE FAVICON PACKAGE
+      const readme = `docst.tech FAVICON PACKAGE
 ========================
 Generated for: ${options.appName}
 

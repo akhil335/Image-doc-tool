@@ -288,7 +288,7 @@ export function svgToDataUri(svgString: string, base64 = false): string {
 export const SAMPLE_SVGS = [
   {
     name: "Docsy Mark",
-    filename: "docforge-aperture.svg",
+    filename: "docst.tech-aperture.svg",
     code: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
   <defs>
     <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">

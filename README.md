@@ -1,4 +1,4 @@
-# DocForge — All-in-One Image Toolkit
+# docst.tech — All-in-One Image Toolkit
 
 A modern, high-performance, 100% client-side image and document processing platform built with Next.js 14 (App Router), TypeScript, and Tailwind CSS.
 

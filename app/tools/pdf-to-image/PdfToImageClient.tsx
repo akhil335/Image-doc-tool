@@ -101,7 +101,7 @@ export default function PdfToImagePage() {
       zip.file(`page-${String(page.pageNumber).padStart(2, "0")}.${ext}`, page.blob);
     });
     const blob = await zip.generateAsync({ type: "blob" });
-    saveAs(blob, "docforge-pdf-pages.zip");
+    saveAs(blob, "docst.tech-pdf-pages.zip");
     setToastMsg("Downloaded all pages as ZIP.");
   }
 

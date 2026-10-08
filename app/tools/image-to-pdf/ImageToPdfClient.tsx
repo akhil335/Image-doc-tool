@@ -78,7 +78,7 @@ export default function ImageToPdfPage() {
         margin
       );
       const blob = new Blob([bytes.slice().buffer], { type: "application/pdf" });
-      saveAs(blob, "docforge-compiled-document.pdf");
+      saveAs(blob, "docst.tech-compiled-document.pdf");
       setToastMsg("PDF compiled and downloaded successfully!");
     } catch (e) {
       console.error(e);

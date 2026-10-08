@@ -1,5 +1,5 @@
 /**
- * Common file and download utilities for DocForge
+ * Common file and download utilities for docst.tech
  */
 import { saveAs } from "file-saver";
 

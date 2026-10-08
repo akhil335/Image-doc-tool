@@ -23,7 +23,7 @@ export default function WatermarkClient() {
   const [watermarkType, setWatermarkType] = useState<"text" | "image">("text");
 
   // Text watermark options
-  const [wmText, setWmText] = useState<string>("© DocForge");
+  const [wmText, setWmText] = useState<string>("© docst.tech");
   const [wmFont, setWmFont] = useState<string>("sans-serif");
   const [wmFontSize, setWmFontSize] = useState<number>(36);
   const [wmColor, setWmColor] = useState<string>("#ffffff");
@@ -175,7 +175,7 @@ export default function WatermarkClient() {
         zip.file(`${baseName}-watermarked.${ext}`, blob);
       }
       const zipBlob = await zip.generateAsync({ type: "blob" });
-      saveAs(zipBlob, "docforge-watermarked-images.zip");
+      saveAs(zipBlob, "docst.tech-watermarked-images.zip");
       setToastMsg("Downloaded all as ZIP archive.");
     } catch (err) {
       console.error(err);

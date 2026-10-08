@@ -121,7 +121,7 @@ export default function ImageRotateFlipClient() {
         zip.file(`${baseName}-transformed.${ext}`, blob);
       }
       const zipBlob = await zip.generateAsync({ type: "blob" });
-      saveAs(zipBlob, "docforge-rotated-images.zip");
+      saveAs(zipBlob, "docst.tech-rotated-images.zip");
       setToastMsg("Downloaded all images as ZIP archive.");
     } catch (err) {
       console.error(err);

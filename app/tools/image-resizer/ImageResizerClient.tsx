@@ -198,7 +198,7 @@ export default function ImageResizerClient() {
     });
 
     const zipBlob = await zip.generateAsync({ type: "blob" });
-    saveAs(zipBlob, `docforge-resized-${globalWidth}x${globalHeight}.zip`);
+    saveAs(zipBlob, `docst.tech-resized-${globalWidth}x${globalHeight}.zip`);
     setToastMsg("ZIP archive downloaded.");
   }
 
