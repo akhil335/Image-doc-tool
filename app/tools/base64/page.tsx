@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Base64 Image Converter — Encode & Decode Images Online",
   description:
     "Convert images to Base64 data URIs, HTML tags, and CSS snippets, or decode Base64 strings back into downloadable image files directly in your browser.",
+  alternates: {
+    canonical: "/tools/base64",
+  },
+  openGraph: {
+    title: "Base64 Image Converter — Encode & Decode Images Online",
+    description:
+      "Convert images to Base64 data URIs, HTML tags, and CSS snippets, or decode Base64 strings back into downloadable image files directly in your browser.",
+    url: "/tools/base64",
+  },
   keywords: [
     "image to base64",
     "base64 to image",

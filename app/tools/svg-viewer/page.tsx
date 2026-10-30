@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Free SVG Viewer & Live Editor Online — Edit, Inspect & Save SVG Markup",
   description:
     "Interactive SVG viewer and live code editor in your browser. Paste raw SVG code directly, inspect viewBox and elements, tweak colors, format or minify XML, and save as SVG, PNG, or React JSX.",
+  alternates: {
+    canonical: "/tools/svg-viewer",
+  },
+  openGraph: {
+    title: "Free SVG Viewer & Live Editor Online — Edit, Inspect & Save SVG Markup",
+    description:
+      "Interactive SVG viewer and live code editor in your browser. Paste raw SVG code directly, inspect viewBox and elements, tweak colors, format or minify XML, and save as SVG, PNG, or React JSX.",
+    url: "/tools/svg-viewer",
+  },
   keywords: [
     "svg viewer",
     "svg editor",

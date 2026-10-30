@@ -3,6 +3,7 @@
 import { useState, useCallback } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ToolSeoSection from "@/components/ToolSeoSection";
 import Dropzone from "@/components/Dropzone";
 import ToolHeader from "@/components/ToolHeader";
 import ProgressBar from "@/components/ProgressBar";
@@ -469,6 +470,8 @@ export default function ImageCompressorClient() {
             </div>
           )}
         </div>
+
+        <ToolSeoSection toolId="image-compressor" />
       </main>
 
       <Footer />

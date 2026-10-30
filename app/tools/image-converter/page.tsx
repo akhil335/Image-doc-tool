@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Free Image Converter Online — PNG, JPG, WebP, AVIF, BMP",
   description:
     "Convert single or batch images between PNG, JPG, WebP, AVIF, and BMP format directly in your browser. Fast, private, and high fidelity.",
+  alternates: {
+    canonical: "/tools/image-converter",
+  },
+  openGraph: {
+    title: "Free Image Converter Online — PNG, JPG, WebP, AVIF, BMP",
+    description:
+      "Convert single or batch images between PNG, JPG, WebP, AVIF, and BMP format directly in your browser. Fast, private, and high fidelity.",
+    url: "/tools/image-converter",
+  },
   keywords: [
     "image converter",
     "png to jpg",

@@ -4,6 +4,7 @@ import { useState, useEffect, useRef, useMemo } from "react";
 import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ToolSeoSection from "@/components/ToolSeoSection";
 import ToolHeader from "@/components/ToolHeader";
 import Toast from "@/components/Toast";
 import { formatBytes, readFileAsText } from "@/lib/fileUtils";
@@ -767,6 +768,8 @@ export default function SvgViewerClient() {
             </div>
           </div>
         </div>
+
+        <ToolSeoSection toolId="svg-viewer" />
       </main>
 
       <Footer />

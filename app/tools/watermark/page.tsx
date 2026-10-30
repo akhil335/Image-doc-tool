@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Add Watermark to Images Online — Text & Logo Watermarking",
   description:
     "Add custom text or logo watermarks to single or batch images online. Control placement, opacity, rotation, and tile patterns directly in your browser.",
+  alternates: {
+    canonical: "/tools/watermark",
+  },
+  openGraph: {
+    title: "Add Watermark to Images Online — Text & Logo Watermarking",
+    description:
+      "Add custom text or logo watermarks to single or batch images online. Control placement, opacity, rotation, and tile patterns directly in your browser.",
+    url: "/tools/watermark",
+  },
   keywords: [
     "image watermark",
     "watermark photos online",

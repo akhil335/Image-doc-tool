@@ -4,6 +4,7 @@ import { useState } from "react";
 import { imagesToPdf, PageSize, PageOrientation } from "@/lib/imageToPdf";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ToolSeoSection from "@/components/ToolSeoSection";
 import Dropzone from "@/components/Dropzone";
 import ToolHeader from "@/components/ToolHeader";
 import Toast from "@/components/Toast";
@@ -324,6 +325,8 @@ export default function ImageToPdfPage() {
             </div>
           )}
         </div>
+
+        <ToolSeoSection toolId="image-to-pdf" />
       </main>
 
       <Footer />

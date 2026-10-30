@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Image Background Tools — Color Key & Background Replacement",
   description:
     "Remove or replace uniform background colors in your photos. Use the eyedropper tool to pick any background color and replace with transparency or solid colors.",
+  alternates: {
+    canonical: "/tools/background",
+  },
+  openGraph: {
+    title: "Image Background Tools — Color Key & Background Replacement",
+    description:
+      "Remove or replace uniform background colors in your photos. Use the eyedropper tool to pick any background color and replace with transparency or solid colors.",
+    url: "/tools/background",
+  },
   keywords: [
     "background replacement",
     "remove background color",

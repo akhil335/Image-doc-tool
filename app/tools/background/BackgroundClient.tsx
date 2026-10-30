@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect, useCallback } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ToolSeoSection from "@/components/ToolSeoSection";
 import Dropzone from "@/components/Dropzone";
 import ToolHeader from "@/components/ToolHeader";
 import Toast from "@/components/Toast";
@@ -350,6 +351,8 @@ export default function BackgroundClient() {
             </div>
           )}
         </div>
+
+        <ToolSeoSection toolId="background" />
       </main>
 
       <Footer />

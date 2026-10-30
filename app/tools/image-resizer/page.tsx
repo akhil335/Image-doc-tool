@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Free Image Resizer Online — Dimensions, Percent & Presets",
   description:
     "Resize images online to custom dimensions, percentages, or social media presets (1080p, Instagram, Story). Features aspect ratio locking and batch processing.",
+  alternates: {
+    canonical: "/tools/image-resizer",
+  },
+  openGraph: {
+    title: "Free Image Resizer Online — Dimensions, Percent & Presets",
+    description:
+      "Resize images online to custom dimensions, percentages, or social media presets (1080p, Instagram, Story). Features aspect ratio locking and batch processing.",
+    url: "/tools/image-resizer",
+  },
   keywords: [
     "image resizer",
     "resize image online",

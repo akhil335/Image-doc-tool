@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "Free Image Cropper Online — Aspect Ratios, Zoom & Rotate",
   description:
     "Crop images online with interactive handles, custom and fixed aspect ratios (1:1, 16:9, 4:3, 9:16), rule-of-thirds grid, and live preview.",
+  alternates: {
+    canonical: "/tools/image-cropper",
+  },
+  openGraph: {
+    title: "Free Image Cropper Online — Aspect Ratios, Zoom & Rotate",
+    description:
+      "Crop images online with interactive handles, custom and fixed aspect ratios (1:1, 16:9, 4:3, 9:16), rule-of-thirds grid, and live preview.",
+    url: "/tools/image-cropper",
+  },
   keywords: [
     "image cropper",
     "crop photo online",

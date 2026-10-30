@@ -2,7 +2,8 @@ import type { MetadataRoute } from "next";
 import { TOOLS } from "@/lib/toolsRegistry";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.docsy.tech/";
+  const rawBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.docsy.tech";
+  const baseUrl = rawBaseUrl.replace(/\/+$/, "");
 
   const toolRoutes = TOOLS.map((t) => ({
     url: `${baseUrl}${t.href}`,

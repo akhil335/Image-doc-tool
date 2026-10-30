@@ -5,6 +5,15 @@ export const metadata: Metadata = {
   title: "SVG Tools Online — Convert, Optimize & True Vectorize",
   description:
     "Convert SVG to PNG, JPG, or WebP at any resolution, optimize SVG markup to reduce file size, or convert raster images into genuine vector SVG paths.",
+  alternates: {
+    canonical: "/tools/svg-tools",
+  },
+  openGraph: {
+    title: "SVG Tools Online — Convert, Optimize & True Vectorize",
+    description:
+      "Convert SVG to PNG, JPG, or WebP at any resolution, optimize SVG markup to reduce file size, or convert raster images into genuine vector SVG paths.",
+    url: "/tools/svg-tools",
+  },
   keywords: [
     "svg to png",
     "svg converter",

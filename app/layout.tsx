@@ -41,10 +41,6 @@ export const metadata: Metadata = {
     "browser image tools",
   ],
 
-  alternates: {
-    canonical: "/",
-  },
-
   openGraph: {
     title: "Docsy — Free Online Image Tools",
     description:
