@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Convert images to Base64 data URIs, HTML tags, and CSS snippets, or decode Base64 strings back into downloadable image files directly in your browser.",
     url: "/tools/base64",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image to base64",

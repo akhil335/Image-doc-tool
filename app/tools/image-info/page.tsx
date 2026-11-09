@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Inspect comprehensive technical details about your images: dimensions, megapixels, aspect ratios, alpha channel, and extract dominant color palette with hex codes.",
     url: "/tools/image-info",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image information",

@@ -52,8 +52,8 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/og-image.png",
-        width: 1114,
-        height: 326,
+        width: 1200,
+        height: 630,
         alt: "Docsy — Free Online Image Tools",
       },
     ],

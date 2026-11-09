@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Compress images online without quality loss. Reduce file size up to 80% directly in your browser. Features live before/after comparison and batch export.",
     url: "/tools/image-compressor",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image compressor",

@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Crop images online with interactive handles, custom and fixed aspect ratios (1:1, 16:9, 4:3, 9:16), rule-of-thirds grid, and live preview.",
     url: "/tools/image-cropper",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image cropper",

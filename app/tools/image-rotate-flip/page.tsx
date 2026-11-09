@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Rotate and flip images online directly in your browser. Rotate clockwise, counter-clockwise, mirror horizontally or vertically. Batch download with instant canvas processing.",
     url: "/tools/image-rotate-flip",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "rotate image",

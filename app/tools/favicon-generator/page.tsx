@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Convert any image or logo into a complete, production-ready favicon package. Generates multi-resolution favicon.ico (16/32/48px), Apple Touch icons, Android Chrome icons, site.webmanifest, and HTML head snippet, downloadable as a ZIP.",
     url: "/tools/favicon-generator",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "favicon generator",

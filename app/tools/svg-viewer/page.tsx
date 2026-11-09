@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Interactive SVG viewer and live code editor in your browser. Paste raw SVG code directly, inspect viewBox and elements, tweak colors, format or minify XML, and save as SVG, PNG, or React JSX.",
     url: "/tools/svg-viewer",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "svg viewer",

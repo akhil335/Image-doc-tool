@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Add custom text or logo watermarks to single or batch images online. Control placement, opacity, rotation, and tile patterns directly in your browser.",
     url: "/tools/watermark",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image watermark",

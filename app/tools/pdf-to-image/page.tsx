@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Convert PDF pages into PNG, JPG, or WebP images directly in your browser. Download individual pages or export all pages as a ZIP archive.",
     url: "/tools/pdf-to-image",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "pdf to image",

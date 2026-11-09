@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "View detailed EXIF metadata, camera settings, exposure, and GPS location tags. Strip all metadata in one click to protect your privacy before sharing.",
     url: "/tools/metadata",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "exif viewer",

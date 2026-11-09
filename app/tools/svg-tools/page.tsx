@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Convert SVG to PNG, JPG, or WebP at any resolution, optimize SVG markup to reduce file size, or convert raster images into genuine vector SVG paths.",
     url: "/tools/svg-tools",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "svg to png",

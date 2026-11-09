@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Remove or replace uniform background colors in your photos. Use the eyedropper tool to pick any background color and replace with transparency or solid colors.",
     url: "/tools/background",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "background replacement",

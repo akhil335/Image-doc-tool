@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Resize images online to custom dimensions, percentages, or social media presets (1080p, Instagram, Story). Features aspect ratio locking and batch processing.",
     url: "/tools/image-resizer",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image resizer",

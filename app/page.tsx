@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Transform your images with Docsy. Convert, compress, resize, crop, and optimize images quickly and easily, right in your browser.",
     url: "/",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — All-in-One Free Image Tools | Fast, Private & In-Browser",
+      },
+    ],
   },
 };
 

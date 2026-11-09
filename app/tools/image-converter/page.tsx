@@ -13,6 +13,14 @@ export const metadata: Metadata = {
     description:
       "Convert single or batch images between PNG, JPG, WebP, AVIF, and BMP format directly in your browser. Fast, private, and high fidelity.",
     url: "/tools/image-converter",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "Docsy — Free Online Image Tools",
+      },
+    ],
   },
   keywords: [
     "image converter",
